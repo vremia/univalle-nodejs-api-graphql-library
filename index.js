@@ -42,12 +42,25 @@ const typeDefs = `#graphql
 
 const books = [
     {
+      id: '81529139-7370-4c9e-870d-8b4947897498',
       title: 'The Awakening',
-      author: 'Kate Chopin',
+      description : 'The Awakening es una novela...',
+      publisher : 'W W Norton & Co Inc',
+      gender : 'NONE',
+      publishYear : 1899,
+      authorName: 'Kate Chopin'
+
     },
     {
+      id : '064d51b1-76a0-4ffe-995b-2f37ee4448ec',
       title: 'City of Glass',
+      description : 'Ciudad de cristal...',
+      isbn : '978-014009874552',
+      publisher : 'Simon & Schuster',
+      gender: 'FANTASY',
+      publishYear : 2009,
       author: 'Paul Auster',
+      authorNationality: 'Estadounidense'
     },
   ];
 
