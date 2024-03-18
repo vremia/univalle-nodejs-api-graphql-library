@@ -7,10 +7,29 @@ import { startStandaloneServer } from '@apollo/server/standalone';
 const typeDefs = `#graphql
   # Comments in GraphQL strings (such as this one) start with the hash (#) symbol.
 
+    enum Gender{
+        NONE
+        FICTION
+        MISTERY
+        FANTASY
+        ROMANCE
+    }
+
+    type Author{
+        name: String
+        nacionality: String
+    }
+
   # This "Book" type defines the queryable fields for every book in our data source.
   type Book {
-    title: String
-    author: String
+    id: String!
+    title: String!
+    description: String
+    isbn: String
+    publisher: String!
+    gender: Gender!
+    publishYear: Int
+    author: Author!
   }
 
   # The "Query" type is special: it lists all of the available queries that
@@ -40,7 +59,7 @@ const resolvers = {
     },
   };
 
-  
+
   // The ApolloServer constructor requires two parameters: your schema
 // definition and your set of resolvers.
 const server = new ApolloServer({
